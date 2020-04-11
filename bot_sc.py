@@ -11,8 +11,8 @@ def start(message):
 markup = types.ReplyKeyboardMarkup
 button_a = types.KeyboardButton('echo')
 button_b = types.KeyboardButton('hey')
-markup.row(a)
-markup.row(b)
+markup.row(button_a)
+markup.row(button_b)
 bot.send_message(chat_id, "Choose letter:", reply_markup = markup)
 
 
