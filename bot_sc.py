@@ -8,11 +8,11 @@ def start(message):
     chat_id = message.chat.id
     bot.send_message(message.chat.id, "Hello, i'm bot, my developer is Alexandra Netskaya, I can do only one thing. And it is write message.")
     bot.send_message(message.chat.id, 'Choose action')
-markup = types.ReplyKeyboardMarkup
-itembtna = types.KeyboardButton('echo')
-itembtnb = types.KeyboardButton('hey')
-markup.row(itembtna)
-markup.row(itembtnb)
+markup = types.ReplyKeyboardMarkup()
+a = types.KeyboardButton('echo')
+b = types.KeyboardButton('hey')
+markup.row(a)
+markup.row(b)
 bot.send_message(chat_id, "Choose letter:", reply_markup = markup)
 
 
