@@ -13,10 +13,8 @@ def loop(message):
     @tb.message_handler(func = lambda message: message.text != "/exit")
     def echo(message):
         tb.send_message(message.chat.id, message.text)
-    @tb.message_handler(func = lambda message: message.text == "/exit")
-    def start(message):
-        tb.send_message(message.chat.id, "Thanks you for using my bot, if you want to start, write '/start'")
-        
+        if (message.text == "/exit"):
+            break
     
 
 tb.polling(none_stop=False, interval = 0, timeout = 20)
