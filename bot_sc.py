@@ -9,10 +9,10 @@ def start(message):
     bot.send_message(message.chat.id, "Hello, i'm bot, my developer is Alexandra Netskaya, I can do only one thing. And it is write message.")
     bot.send_message(message.chat.id, 'Choose action')
 markup = types.ReplyKeyboardMarkup
-button_a = types.KeyboardButton('echo')
-button_b = types.KeyboardButton('hey')
-markup.row(button_a)
-markup.row(button_b)
+itembtna = types.KeyboardButton('echo')
+itembtnb = types.KeyboardButton('hey')
+markup.row(itembtna)
+markup.row(itembtnb)
 bot.send_message(chat_id, "Choose letter:", reply_markup = markup)
 
 
