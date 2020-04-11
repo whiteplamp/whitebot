@@ -13,7 +13,7 @@ def loop(message):
     @tb.message_handler(commands=['exit'])
     def start(message):
         tb.send_message(message.chat.id, "Thanks you for using my bot")
-        answer('start')
+        answer()
     
 
 tb.polling(none_stop=False, interval = 0, timeout = 20)
