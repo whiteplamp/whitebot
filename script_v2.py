@@ -10,7 +10,7 @@ def answer(message):
 @tb.message_handler(commands=['echo'])
 def loop(message):
     tb.send_message(message.chat.id, 'Your next message will be repeated by me')
-    @tb.message_handler(commands=['exit'])
+    @tb.message_handler(regexp!=['/exit'])
     def start(message):
         tb.send_message(message.chat.id, "Thanks you for using my bot, if you want to start, write '/start'")
         
