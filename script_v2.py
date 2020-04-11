@@ -11,7 +11,7 @@ def answer(message):
 def loop(message):
     tb.send_message(message.chat.id, 'Your next message will be repeated by me')
     @tb.message_handler(func = lambda message: message.text != "/exit")
-    def start(message)
+    def start(message):
         tb.send_message(message.chat.id, "Thanks you for using my bot, if you want to start, write '/start'")
         
     
