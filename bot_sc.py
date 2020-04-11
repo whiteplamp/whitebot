@@ -3,7 +3,7 @@ import telebot
 from telebot import types
 bot = telebot.TeleBot(config.token)
 
-@bot.message_handler(commands=['start']
+@bot.message_handler(commands=['start'])
 def start(message):
     chat_id = message.chat.id
     bot.send_message(message.chat.id, "Hello, i'm bot, my developer is Alexandra Netskaya, I can do only one thing. And it is write message.")
