@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- 
 import config 
 import telebot 
-tb = telebot.Telebot(token)
+tb = telebot.Telebot(config.token)
 @tb.message_handler(commands=['ke'])
 def answer(message):
     tb.send_message(message.chat.id, "хочу сигуууууу")
