@@ -3,7 +3,7 @@
 import config 
 import telebot 
 tb = telebot.TeleBot(config.token)
-@tb.message_handler(commands=['ke'])
+@tb.message_handler(commands=['sigarette'])
 def answer(message):
     tb.send_message(message.chat.id, "хочу сигуууууу")
 
