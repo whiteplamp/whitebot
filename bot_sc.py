@@ -12,7 +12,7 @@ def start(message):
     b = types.KeyboardButton('hey')
     markup.row(a)
     markup.row(b)
-    bot.send_message(message.chat.id, "Choose letter:")
+    bot.send_message(message.chat.id, "Choose letter:", reply_markup = markup)
 
 
 bot.polling(none_stop=False, interval = 0, timeout = 20)
