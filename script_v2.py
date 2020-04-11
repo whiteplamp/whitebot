@@ -13,7 +13,9 @@ def loop(message):
     @tb.message_handler(func = lambda message: message.text != "/exit")
     def echo(message):
         tb.send_message(message.chat.id, message.text)
-    break
+break
+
+answer()
     
 
 tb.polling(none_stop=False, interval = 0, timeout = 20)
