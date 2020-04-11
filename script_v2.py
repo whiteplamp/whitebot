@@ -9,8 +9,11 @@ def answer(message):
     tb.send_message(message.chat.id, "I can repeat your messages, if you want it, you can write '/echo' for me")
 @tb.message_handler(commands=['echo'])
 def loop(message):
-    tb.send_message(message.chat.id, 'Your next message will be repeated by me')
+    tb.send_message(message.chat.id, "Your next message will be repeated by me, if you want to end repeating, just write '/exit'")
     @tb.message_handler(func = lambda message: message.text != "/exit")
+    def echo(message):
+        tb.send_message(message.chat.id, message.text)
+    @tb.message_handler(func = lambda message: message.text == "/exit")
     def start(message):
         tb.send_message(message.chat.id, "Thanks you for using my bot, if you want to start, write '/start'")
         
