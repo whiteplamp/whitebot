@@ -20,9 +20,9 @@ def start(message):
     bot.send_message(message.chat.id, "Choose letter:", reply_markup = markup)
     @bot.message_handler(content_types=['text'])
     def test_message(message):
-        if message == '1':
+        if message.text == '1':
             bot.send_message(message.chat.id, '1')
-        elif message == '2':
+        elif message.text == '2':
             bot.send_message(message.chat_id, '1')
         bot.send_message(message.chat.id, '/start')
        
