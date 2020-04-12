@@ -23,7 +23,7 @@ def start(message):
         if message.text == '1':
             bot.send_message(message.chat.id, '1')
         elif message.text == '2':
-            bot.send_message(message.chat_id, '1')
+            bot.send_message(message.chat.id, '2')
         bot.send_message(message.chat.id, '/start')
        
 
