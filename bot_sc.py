@@ -27,7 +27,7 @@ def start(message):
             bot.send_message(message.chat.id, '1')
             code_b = 15
             markup = types.ReplyKeyboardRemove(selective=False)
-            bot.send_message(chat_id, message, reply_markup=markup)
+            bot.send_message(message.chat.id, 'key a', reply_markup=markup)
             ###############################################################`
             ##################SECOND BUTTONS###############################
             markup = types.ReplyKeyboardMarkup()
