@@ -25,11 +25,13 @@ def start(message):
             bot.send_message(message.chat.id, '1')
             code_b = 15
             markup = types.ReplyKeyboardRemove(selective=False)
+            tb.send_message(chat_id, message, reply_markup=markup)
             markup = types.ReplyKeyboardMarkup()
             key_a = types.KeyboardButton('key a')
             key_b = types.KeyboardButton('key b')
             markup.row(key_a)
             markup.row(key_b)
+            bot.send_message(message.chat.id, "TEST KEY", reply_markup = markup)
         elif message.text == '2':
             bot.send_message(message.chat.id, '2')
         bot.send_message(message.chat.id, '/start')
