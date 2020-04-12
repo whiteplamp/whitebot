@@ -19,7 +19,7 @@ def start(message):
     markup.row(c)
     markup.row(d)
     bot.send_message(message.chat.id, "Choose letter:", reply_markup = markup)
-    while pole = True:
+    while pole == True:
         @bot.message_handler(content_types=['text'])
         def test_message(message):
             if message == '/back':
