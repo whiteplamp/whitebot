@@ -22,9 +22,7 @@ def start(message):
     while pole == True:
         @bot.message_handler(content_types=['text'])
         def test_message(message):
-            if message == '/back':
-                break
-            elif message == '1':
+            if message == '1':
                 bot.send_message(message.chat.id, '1')
             elif message == '2':
                 bot.send_message(message.chat_id, '1')
