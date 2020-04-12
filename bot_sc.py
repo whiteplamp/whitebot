@@ -14,8 +14,7 @@ def start(message):
     b = types.KeyboardButton('2')
     c = types.KeyboardButton('3')
     d = types.KeyboardButton('/back')
-    key_a = types.KeyboardButton('key a')
-    key_b = types.KeyboardButton('key b')
+   
     markup.row(a,b)
     markup.row(c)
     markup.row(d)
@@ -25,6 +24,10 @@ def start(message):
         if message.text == '1':
             bot.send_message(message.chat.id, '1')
             code_b = 15
+            markup = types.ReplyKeyboardRemove(selective=False)
+            markup = types.ReplyKeyboardMarkup()
+            key_a = types.KeyboardButton('key a')
+            key_b = types.KeyboardButton('key b')
             markup.row(key_a)
             markup.row(key_b)
         elif message.text == '2':
