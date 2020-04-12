@@ -1,7 +1,6 @@
 import config
 import telebot
 from telebot import types
-pole = true
 bot = telebot.TeleBot(config.token)
 
 
@@ -19,14 +18,13 @@ def start(message):
     markup.row(c)
     markup.row(d)
     bot.send_message(message.chat.id, "Choose letter:", reply_markup = markup)
-    while pole == True:
-        @bot.message_handler(content_types=['text'])
-        def test_message(message):
-            if message == '1':
-                bot.send_message(message.chat.id, '1')
-            elif message == '2':
-                bot.send_message(message.chat_id, '1')
-            bot.send_message(message.chat.id, '/start')
+    @bot.message_handler(content_types=['text'])
+    def test_message(message):
+        if message == '1':
+            bot.send_message(message.chat.id, '1')
+        elif message == '2':
+            bot.send_message(message.chat_id, '1')
+        bot.send_message(message.chat.id, '/start')
        
 
 bot.polling(none_stop=False, interval = 0, timeout = 20)
