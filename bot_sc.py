@@ -21,11 +21,15 @@ def start(message):
     bot.send_message(message.chat.id, "Choose letter:", reply_markup = markup)
     @bot.message_handler(content_types=['text'])
     def test_message(message):
+        #############################################################################
+        #First button changes
         if message.text == '1':
             bot.send_message(message.chat.id, '1')
             code_b = 15
             markup = types.ReplyKeyboardRemove(selective=False)
-            tb.send_message(chat_id, message, reply_markup=markup)
+            bot.send_message(chat_id, message, reply_markup=markup)
+            ###############################################################`
+            ##################SECOND BUTTONS###############################
             markup = types.ReplyKeyboardMarkup()
             key_a = types.KeyboardButton('key a')
             key_b = types.KeyboardButton('key b')
